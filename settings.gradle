@@ -1,2 +1,2 @@
-include ':app', ':common'
+include ':app', ':common', ':bindview', ':base'
 rootProject.name='WorldofWarships'
