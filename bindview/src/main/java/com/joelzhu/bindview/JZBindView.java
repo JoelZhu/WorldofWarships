@@ -60,7 +60,7 @@ public final class JZBindView {
         for (Field field : fields) {
             FindView findView = field.getAnnotation(FindView.class);
             if (findView == null) {
-                LogUtil.w("Didn't find 'FindView' annotation, ignore binding FindView.");
+                LogUtil.w("Didn't find '@FindView', ignore binding, field: " + field.getName());
                 continue;
             }
 
@@ -99,7 +99,7 @@ public final class JZBindView {
         for (final Method method : methods) {
             final OnClick onClick = method.getAnnotation(OnClick.class);
             if (onClick == null) {
-                LogUtil.w("Didn't find 'OnClick' annotation, ignore binding OnClick.");
+                LogUtil.w("Didn't find '@OnClick', ignore binding, method: " + method.getName());
                 continue;
             }
 
