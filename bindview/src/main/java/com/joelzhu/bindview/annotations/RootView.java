@@ -9,6 +9,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface ContentView {
-    @LayoutRes int value();
+public @interface RootView {
+    @LayoutRes int resId() default -1;
+
+    String resName() default "";
 }

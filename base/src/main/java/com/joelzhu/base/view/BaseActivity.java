@@ -1,11 +1,12 @@
 package com.joelzhu.base.view;
 
-import android.app.Activity;
 import android.os.Bundle;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.joelzhu.bindview.JZBindView;
 
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends FragmentActivity {
     @Override
     protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,13 @@ public abstract class BaseActivity extends Activity {
     }
 
     @Override
+    protected final void onPause() {
+        super.onPause();
+
+        pauseActivity();
+    }
+
+    @Override
     protected final void onStop() {
         super.onStop();
 
@@ -61,6 +69,9 @@ public abstract class BaseActivity extends Activity {
     }
 
     protected void restartActivity() {
+    }
+
+    protected void pauseActivity() {
     }
 
     protected void stopActivity() {
