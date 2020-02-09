@@ -5,22 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".view.activity.MainActivity">
+    tools:context=".PlayerFragment">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/fragment_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search 'Joel'" />
+        android:text="Click Here" />
 
-    <TextView
-        android:id="@+id/player"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
-
-    <FrameLayout
-        android:id="@+id/view"
+    <ListView
+        android:id="@+id/fragment_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="16dp" />

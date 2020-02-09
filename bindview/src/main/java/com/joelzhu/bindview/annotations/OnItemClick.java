@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface OnClick {
+public @interface OnItemClick {
     @IdRes int resId() default -1;
 
     String resName() default "";
