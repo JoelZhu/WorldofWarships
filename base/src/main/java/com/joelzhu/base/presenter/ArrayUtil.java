@@ -1,6 +1,6 @@
-package com.joelzhu.common;
+package com.joelzhu.base.presenter;
 
-import com.joelzhu.common.http.Parameter;
+import com.joelzhu.base.presenter.network.Parameter;
 
 public final class ArrayUtil {
     private ArrayUtil() {

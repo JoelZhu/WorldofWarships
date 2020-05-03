@@ -10,7 +10,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface RootView {
-    @LayoutRes int resId() default -1;
-
-    String resName() default "";
+    @LayoutRes int value() default -1;
 }

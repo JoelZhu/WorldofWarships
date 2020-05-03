@@ -1,9 +1,9 @@
-package com.joelzhu.worldofwarships.present.task.impl;
+package com.joelzhu.player;
 
 import android.content.Intent;
 
-import com.joelzhu.base.present.HttpRequestTask;
-import com.joelzhu.common.http.Parameter;
+import com.joelzhu.base.presenter.network.HttpRequestTask;
+import com.joelzhu.base.presenter.network.Parameter;
 
 public class SearchPlayerTask extends HttpRequestTask {
     @Override

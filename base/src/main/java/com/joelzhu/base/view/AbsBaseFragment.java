@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.joelzhu.bindview.JZBindView;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class AbsBaseFragment extends Fragment {
     @Nullable
     @Override
     public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

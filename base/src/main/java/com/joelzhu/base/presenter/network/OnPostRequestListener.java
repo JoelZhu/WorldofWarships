@@ -1,4 +1,4 @@
-package com.joelzhu.common.http;
+package com.joelzhu.base.presenter.network;
 
 public interface OnPostRequestListener extends OnRequestListener {
 }

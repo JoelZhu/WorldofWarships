@@ -1,82 +1,88 @@
 package com.joelzhu.base.view;
 
+import android.app.Activity;
 import android.os.Bundle;
-
-import androidx.fragment.app.FragmentActivity;
 
 import com.joelzhu.bindview.JZBindView;
 
-public abstract class BaseActivity extends FragmentActivity {
+public abstract class AbsBaseActivity extends Activity {
     @Override
     protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        
+        doBeforeSetContentView();
+        
         // Bind view when activity created.
-        JZBindView.bindView(this);
-
+        AbsBaseActivity activity = activity2BeBound();
+        if (activity == null) {
+            activity = this;
+        }
+        JZBindView.bindView(activity);
+        
         createActivity();
     }
-
+    
     @Override
     protected final void onResume() {
         super.onResume();
-
         resumeActivity();
     }
-
+    
     @Override
     protected final void onStart() {
         super.onStart();
-
         startActivity();
     }
-
+    
     @Override
     protected final void onRestart() {
         super.onRestart();
-
         restartActivity();
     }
-
+    
     @Override
     protected final void onPause() {
         super.onPause();
-
         pauseActivity();
     }
-
+    
     @Override
     protected final void onStop() {
         super.onStop();
-
         stopActivity();
     }
-
+    
     @Override
     protected final void onDestroy() {
         super.onDestroy();
-
         destroyActivity();
     }
-
-    protected void createActivity() {
+    
+    public void createActivity() {
     }
-
-    protected void resumeActivity() {
+    
+    public void resumeActivity() {
     }
-
-    protected void startActivity() {
+    
+    public void startActivity() {
     }
-
-    protected void restartActivity() {
+    
+    public void restartActivity() {
     }
-
-    protected void pauseActivity() {
+    
+    public void pauseActivity() {
     }
-  
-    protected void stopActivity() {
+    
+    public void stopActivity() {
     }
-
-    protected void destroyActivity() {
+    
+    public void destroyActivity() {
+    }
+    
+    protected void doBeforeSetContentView() {
+    }
+    
+    protected AbsBaseActivity activity2BeBound() {
+        return this;
     }
 }

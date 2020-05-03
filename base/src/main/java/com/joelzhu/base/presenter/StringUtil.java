@@ -1,4 +1,4 @@
-package com.joelzhu.common;
+package com.joelzhu.base.presenter;
 
 public final class StringUtil {
     private StringUtil() {
